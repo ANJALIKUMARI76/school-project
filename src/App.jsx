@@ -13,6 +13,7 @@ import Dashboard from './Pages/Dashboard.jsx'
 import { useEffect, useState } from 'react'
 import { analytics, } from './Helpers/index.js'
 import {logEvent} from 'firebase/analytics'
+import Chat from './Pages/Chat.jsx'
 
 function App() {
 if(analytics){
@@ -39,6 +40,7 @@ if(token){
       <Route path='/news' element={<News/>}/>
       <Route path='/register' element={<Register/>}/>
      <Route path='/login' element={<LogIn/>} />
+     <Route path='/chat' element={<Chat/>}/>
 { loggedIn && <Route path='/dashboard' element={<Dashboard/>} />}
     </Routes>
     
